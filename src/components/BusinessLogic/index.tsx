@@ -339,6 +339,10 @@ const BusinessLogic: React.FC<Props> = ({code, replaySlug, roomName}) => {
           e.preventDefault();
           stopGame();
         }
+        if (e.ctrlKey && e.key === "Enter") {
+          e.preventDefault();
+          document.getElementById("start-game")?.click();
+        }
       },
       false,
     );
